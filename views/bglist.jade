@@ -1,0 +1,137 @@
+extends layout
+
+block nameOfSite
+  | 台南市城市交流藝廊
+
+block metaData
+  meta( property='og:site_name' content='台南市城市交流藝廊' )
+  meta( property='og:title' content='台南市城市交流藝廊' )
+  meta( property='og:description' content='臺南市不斷與世界各地城市有著各式交流活動，同時也接收到來自各方祝福，收受了各種獨特的公務禮物，但這些禮物過去都只被保存在市府內未曾公開。每個禮物背後都是曾經聯繫的故事，為了讓這些故事更為人所知，讓記憶得以延續，因此誕生了這個網站。' )
+  //meta( property='og:url' content='http://tagw2-acatech.rhcloud.com/' )
+  meta( property='og:url' content=data.url )
+  mata( property='fb:app_id' content='306911439343485' )
+  meta( property='og:image' content='http://tagw2-acatech.rhcloud.com/images/g1s/s361_01.jpg' )
+  meta( property='og:image:type' content='image/jpeg' )
+  meta( property='og:image:width' content='1200' )
+  meta( property='og:image:height' content='800' )
+
+block stylesheets
+  link( rel = 'stylesheet', href = data.css.main )
+
+block content
+  h1= data.title
+  div(class='cover')
+  div(class='cover-2')
+  div(class='cover-3')
+  div(class='header-wrapper')
+    div(class='logo-wrapper')
+      a(class='logo')
+    a(class='searchBarDiv left-2')
+      span(class='searchBar searchIcn')
+      input(id='qry' class='searchBar' placeholder='搜尋')
+  #settings.content
+    ul#toolbar
+      li#show-recent-camp
+        div.toolbar-div
+          p 近期活動
+      li#show-faved-posts
+        .toggle-star
+      li
+        .toggle-gift
+  #recent-camp.content
+    #add-camp-panel
+      button#add-new-shit
+        | 新增活動
+      ul#new-camp-form
+        li#new-camp-title
+          span
+            | 活動名稱
+          input(type = 'text')
+        li#new-camp-date
+          span
+            | 時間
+          input(type = 'text')
+        li#new-camp-location
+          span
+            | 地點
+          input(type = 'text')
+        li#new-camp-ticket
+          span
+            | 售票
+          input(type = 'text')
+        li#new-camp-host
+          span
+            | 主辦單位
+          input(type = 'text')
+        li#new-camp-site
+          span
+            | 活動官網
+          input(type = 'text')
+        li#new-camp-image
+          span
+            | 照片連結
+          input(type = 'text')
+        li#new-camp-rel
+          span
+            | 相關事件
+          input(type = 'text')
+    ul#show-current-camp
+  #all-result.content
+  #card-result.content
+    h4#subtitle
+    #left-col
+    #right-col
+      ul.card-navbar
+        li
+          a#nav-event.card-navBtn
+            center
+              p.card-nav-title
+                | 交流事件 
+        li 
+          a#nav-about.card-navBtn 
+            center
+              p.card-nav-title
+                | 相關資訊 
+        li
+          a#nav-intro.card-navBtn
+            center
+              p.card-nav-title
+                | 禮品簡介 
+        li
+          a#nav-comments.card-navBtn
+            center
+              p.card-nav-title
+                | 留言 
+      #card-showbox.card-showbox
+        #card-showbox-event
+          h2#event-title
+          #event-content.showbox-content
+        #card-showbox-about
+          h2#about-title
+          #about-content.showbox-content
+        #card-showbox-intro
+          ul
+            li.intro-subtitle 交流禮品
+            li.intro-subcontent#intro-name
+            li.intro-subtitle 受贈日期
+            li.intro-subcontent#intro-date
+            li.intro-subtitle 致贈者
+            li.intro-subcontent#intro-from
+            li.intro-subtitle 受贈者
+            li.intro-subcontent#intro-to
+        #card-showbox-comments
+          div(class="fb-comments" data-href=data.url data-width="420" data-numposts="5" data-colorscheme="light")
+  .edit-camp-btn
+    p 
+      | 近期活動
+  .logout-btn
+    p 
+      | 登出
+  p( id = 'acadatapipe' style = 'display:none' ) #{data.ret}
+
+block javascripts
+  each jssrc in data.js.jquery
+    script( src = jssrc )
+  script( src = data.js.aca.tool )
+  each jssrc in data.js.inc
+    script( src = jssrc )

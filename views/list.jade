@@ -1,0 +1,165 @@
+extends layout
+
+block nameOfSite
+  | 台南市城市交流藝廊
+
+block metaData
+  meta( name='google-site-verification' content='IlohLu_3VOSworzJ-Zp0NI_Lv8ap8ZgRE89eLF5DLHw')
+  meta( name='keyword' content='台南,台南市,城市,交流,藝廊,城市交流,城市交流藝廊,tainan,diplo,diplogift' )
+  meta( name='description' content='台南市城市交流藝廊' )
+  mata( property='fb:app_id' content='306911439343485' )
+  meta( property='og:site_name' content='台南市城市交流藝廊' )
+  meta( property='og:title' content='台南市城市交流藝廊' )
+  meta( property='og:description' content='臺南市不斷與世界各地城市有著各式交流活動，同時也接收到來自各方祝福，收受了各種獨特的公務禮物，但這些禮物過去都只被保存在市府內未曾公開。每個禮物背後都是曾經聯繫的故事，為了讓這些故事更為人所知，讓記憶得以延續，因此誕生了這個網站。' )
+  meta( property='og:url' content='http://diplogift.com' )
+  meta( property='og:image' content='http://diplogift.com/images/g1s/s361_01.jpg' )
+  meta( property='og:image:type' content='image/jpeg' )
+  meta( property='og:image:width' content='1200' )
+  meta( property='og:image:height' content='800' )
+
+block stylesheets
+  link( rel = 'stylesheet', href = data.css.main )
+  link( rel = 'stylesheet', href = '/stylesheets/waiting.css' )
+  
+
+block content
+  //h1= data.title
+  .waiting-container
+    .waiting
+      .spin-section
+        .spinner
+          .double-bounce1
+          .double-bounce2
+  a.floating-logo
+  .cover
+    ul.home-menu
+      li#li-featuring
+        p 焦點閱讀
+      li#li-camp
+        p 近期活動
+      li#li-about-this
+        p 關於網站
+      li#li-past
+        p 交流存摺
+    .featuring-section
+      #feature-event.featuring-post
+        h3#feature-event-title 
+        p#feature-event-content
+      #feature-camp.featuring-post
+        h3#feature-camp-title
+        p#feature-camp-content
+      #feature-about.featuring-post
+        .site-info
+          b(style = 'font-size:120%')
+            | 網站緣由
+          p
+            | 臺南市不斷與世界各地城市有著各式交流活動，同時也接收到來自各方祝福，收受了各種獨特的公務禮物，但這些禮物過去都只被保存在市府內未曾公開。每個禮物背後都是曾經聯繫的故事，為了讓這些故事更為人所知，讓記憶得以延續，因此誕生了這個網站。
+          b(style = 'font-size:120%')
+            | 這個網站由誰提供？如何製作？
+          p
+            | 由臺南市政府以及 Aca 阿卡聯合出品，網頁及受贈禮品攝影由 Aca 阿卡執行製作。資料內容根據
+            a(href = 'http://data.tainan.gov.tw' style = 'color: #ddd;')
+              |  臺南市政府資料開放平台
+            | 延伸應用。
+          b(style = 'font-size:120%')
+            | 版權說明
+          p 
+            a(rel='license' href='http://creativecommons.org/licenses/by-nc-sa/4.0/')
+              img(alt='創用 CC 授權條款' style='border-width:0; margin-top:0; margin-bottom:-1em' src='https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png')
+          p(style='font-size:105%; line-height:170%')
+            span(xmlns:dct='http://purl.org/dc/terms/' property='dct:title')
+              | 台南市城市交流藝廊
+            | 由
+            span(xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName')
+              | Aca 阿卡國際
+            | 製作，以
+            a(rel='license' href='http://creativecommons.org/licenses/by-nc-sa/4.0/' style = 'color: #ddd;')
+              | 創用CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款
+            |釋出。
+    .featuring-nav
+      .prev.featuring-nav-box 
+        span <
+      .middle.featuring-nav-box
+        span#f-count
+      .next.featuring-nav-box
+        span >
+    #right-side-articles.right-side-pics 
+      .pic-up
+      .pic-mid
+      .pic-down
+    #right-side-about.right-side-pics 
+      .two-logos
+      p
+        span#count-posts
+        | 筆交流事件
+        br
+        span#count-gifts
+        | 件典藏交流禮品
+        br
+        span#count-pics
+        | 張照片
+  div(class='cover-2')
+    a(class='searchBarDiv left-2')
+      span(class='searchBar searchIcn')
+      input(id='qry' class='searchBar' placeholder='搜尋')
+  //div(class='cover-3')
+  div(class='header-wrapper')
+    div(class='logo-wrapper')
+      a(class='logo')
+  .wide
+    #filter-bar
+      .toggle-gift
+    #all-result.content
+    #card-result.content
+      h4#subtitle
+      #left-col
+      ul.card-navbar
+        li
+          a#nav-event.card-navBtn
+            center
+              p.card-nav-title
+                | 交流事件 
+        li 
+          a#nav-about.card-navBtn 
+            center
+              p.card-nav-title
+                | 相關資訊 
+        li
+          a#nav-intro.card-navBtn
+            center
+              p.card-nav-title
+                | 禮品簡介 
+        li
+          a#nav-comments.card-navBtn
+            center
+              p.card-nav-title
+                | 留言 
+      #right-col
+        #card-showbox.card-showbox
+          #card-showbox-event
+            h2#event-title
+            #event-content.showbox-content
+          #card-showbox-about
+            h2#about-title
+            #about-content.showbox-content
+          #card-showbox-intro
+            ul
+              li.intro-subtitle 交流禮品
+              li.intro-subcontent#intro-name
+              li.intro-subtitle 受贈日期
+              li.intro-subcontent#intro-date
+              li.intro-subtitle 致贈者
+              li.intro-subcontent#intro-from
+              li.intro-subtitle 受贈
+              li.intro-subcontent#intro-to
+          #card-showbox-comments
+            div(class="fb-comments" data-href=data.url data-width="420" data-numposts="5" data-colorscheme="light")
+  p( id = 'acadatapipe' style = 'display:none' ) #{data.ret}
+  p( id = 'acadatapipe-goto' style = 'display:none' ) #{goto}
+
+block javascripts
+  each jssrc in data.js.jquery
+    script( src = jssrc )
+  script( src = data.js.aca.tool )
+  each jssrc in data.js.inc
+    script( src = jssrc )
