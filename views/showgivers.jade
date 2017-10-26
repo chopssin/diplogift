@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  #results
+
+block javascripts
+  each jssrc in data.js.jquery
+    script( src = jssrc )
+  script( src = data.js.aca.tool )
+  each jssrc in data.js.inc
+    script( src = jssrc )
