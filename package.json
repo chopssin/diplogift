@@ -18,5 +18,8 @@
     "mongoskin": "2.0.3",
     "mongodb": "~2.0",
     "connect-mongo" : "~0.8.x"
+  },
+  engines: {
+    "node": "0.6.x"
   }
 }
