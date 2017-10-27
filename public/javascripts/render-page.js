@@ -264,7 +264,10 @@ Dg.setPage('home', function() {
 
   $(pageRoot)
     .append('<div id="cover-story" class="col-xs-12"></div>')
-    .append('<div id="about" class="col-xs-12"><div class="about-text">' + aboutText + '</div></div>')
+    .append('<div id="about" class="col-xs-12"><div class="about-wrap row">'
+        + '<div class=\"col-xs-12 col-md-6\"><div class=\"about-text\">' + aboutText + '</div></div>'
+        + '<div class="col-xs-12 col-md-6 about-bg"></div>'
+        + '</div></div>')
     .append('<div id="events" class="col-xs-12 col-sm-6"></div>')
     .append('<div id="items" class="col-xs-12 col-sm-6"></div>')
     .append('<div id="recommended" class="col-xs-12"></div>');
