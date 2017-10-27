@@ -252,7 +252,8 @@ Dg.setPage('home', function() {
       editable = false,
       editMainHTML = '<section id="zone" class="edit-section"></section>', 
       sample1 = 'https://firebasestorage.googleapis.com/v0/b/cope-326d5.appspot.com/o/user_apps%2Fdiplogifts-1%2Fimages%2Fevents%2F361-01.jpg?alt=media&token=648e83f2-f5f3-4b4f-adea-654015a4f658',
-      sample2 = 'https://firebasestorage.googleapis.com/v0/b/cope-326d5.appspot.com/o/user_apps%2Fdiplogifts-1%2Fimages%2Fitems%2F409_02.jpg?alt=media&token=eb2d0418-8966-4c8b-b0af-eb752831d9f6';
+      sample2 = 'https://firebasestorage.googleapis.com/v0/b/cope-326d5.appspot.com/o/user_apps%2Fdiplogifts-1%2Fimages%2Fitems%2F409_02.jpg?alt=media&token=eb2d0418-8966-4c8b-b0af-eb752831d9f6',
+      aboutText = "<h3>關於網站</h3><p>臺南市不斷與世界各地城市有著各式交流活動，同時也接收到來自各方祝福，收受了各種獨特的公務禮物，但這些禮物過去都只被保存在市府內未曾公開。每個禮物背後都是曾經聯繫的故事，為了讓這些故事更為人所知，讓記憶得以延續，因此誕生了這個網站。</p><p>本網站由<a href=\"http://web.tainan.gov.tw/sec/\">台南市政府秘書處</a>特別企劃。</p>";
 
   //if (Dg.path.indexOf('edit') > -1) {
   if (this.editable) {
@@ -263,6 +264,7 @@ Dg.setPage('home', function() {
 
   $(pageRoot)
     .append('<div id="cover-story" class="col-xs-12"></div>')
+    .append('<div id="about" class="col-xs-12"><div class="about-text">' + aboutText + '</div></div>')
     .append('<div id="events" class="col-xs-12 col-sm-6"></div>')
     .append('<div id="items" class="col-xs-12 col-sm-6"></div>')
     .append('<div id="recommended" class="col-xs-12"></div>');
@@ -363,6 +365,9 @@ Dg.setPage('items', function() {
       renderDS = dataSnap(),
       now = new Date().getTime();
       //items = {};
+
+  // Show `Home` link in nav
+  $('.back-to-home').show();
   
   //if (Dg.path.indexOf('edit') > -1) {
   if (this.editable) {
@@ -515,6 +520,9 @@ Dg.setPage('events', function() {
       now = new Date().getTime(),
       editable = false,
       unpub_section;
+
+  // Show `Home` link in nav
+  $('.back-to-home').show();
   
   //if (Dg.path.indexOf('edit') > -1) {
   if (this.editable) {
@@ -619,6 +627,9 @@ Dg.setPage('item-single', function(params) {
       itemId = Dg.path.split('/').reverse()[0],
       itemNode = Items.get(itemId),
       nodeCover = G.col('featurings').get('coverStory');
+
+  // Show `Home` link in nav
+  $('.back-to-home').show();
 
   if (this.editable) {
     editable = true;
@@ -978,6 +989,9 @@ Dg.setPage('event-single', function() {
       eventId,
       nodeEvt;
 
+  // Show `Home` link in nav
+  $('.back-to-home').show();
+
   //if (query.indexOf('edit') > -1) {
   if (this.editable) {
     //query = query.slice(query.indexOf('edit') + 4);
@@ -1248,6 +1262,9 @@ Dg.setPage('_event-single', function() {
       query = Dg.path,
       editable = false;
 
+  // Show `Home` link in nav
+  $('.back-to-home').show();
+
   if (query.indexOf('edit') > -1) {
     query = query.slice(query.indexOf('edit') + 4);
     editable = true;
@@ -1499,6 +1516,9 @@ Dg.setPage('media.images', function() {
   $('#nav a.logo').prop('href', '/edit');
   $('body').css('background', '#111')
     .css('color', '#fff');
+
+  // Show `Home` link in nav
+  $('.back-to-home').show();
 
   fetchDS.load(function() {
     Editor.getImages().then(function(res) {

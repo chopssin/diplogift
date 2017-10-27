@@ -278,6 +278,18 @@ a.brick-link button.right {
   background-size: contain;
 }
 
+.nav .back-to-home {
+  display: none;
+  position: relative;
+  margin-right: 8%;
+  height: 50%;
+  font-size: 24px;
+  color: #E4D5BF;
+  text-align: right;
+  float: right;
+  top: -17px;
+}
+
 /* Page control */
 .page-control {
   padding: 20px 0;
@@ -614,6 +626,30 @@ ul.item-page-ul li.title {
 /*[class*="m-"] {
   width: 100%;
 }*/
+
+div.about-text {
+  /*background: rgb(79, 65, 47);*/
+  width: 100%;
+  color: #333;
+  border: 2px solid rgb(79, 65, 47);
+  margin: 24px 0 60px 0;
+  padding: 24px;
+}
+
+div.about-text p {
+  position: relative;
+  margin: 0 auto;
+  max-width: 540px;
+  font-size: 1.4em;
+  padding: 16px;
+}
+
+div.about-text h3 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 540px;
+  padding: 16px;
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
