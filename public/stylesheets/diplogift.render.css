@@ -268,14 +268,17 @@ a.brick-link button.right {
   position: relative;
   margin-left: 8%;
   height: 50%;
-  width: 100%;
+  line-height: 25px;
+  /*width: 100%;*/
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-image: url('/images/icons/logo.png');
+  font-size: 20px;
+  color: #E4D5BF;
+  /*background-image: url('/images/icons/logo.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain;*/
 }
 
 .nav .back-to-home {
@@ -283,11 +286,15 @@ a.brick-link button.right {
   position: relative;
   margin-right: 8%;
   height: 50%;
-  font-size: 24px;
+  line-height: 25px;
+  font-size: 14px;
   color: #E4D5BF;
   text-align: right;
   float: right;
-  top: -17px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /* Page control */
@@ -678,6 +685,14 @@ div.about-bg {
   }
   .nav {
     height: 100px;
+  }
+  .nav .back-to-home,
+  .nav .logo {
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .nav .logo {
+    font-size: 28px;
   }
   .event-post h2 {
     font-size: 30px;
