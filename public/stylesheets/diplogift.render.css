@@ -282,7 +282,7 @@ a.brick-link button.right {
 }
 
 .nav .back-to-home {
-  display: none;
+  display: block;
   position: relative;
   margin-right: 8%;
   height: 50%;
@@ -292,6 +292,7 @@ a.brick-link button.right {
   text-align: right;
   float: right;
   top: 50%;
+  opacity: 0;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -370,7 +370,7 @@ Dg.setPage('items', function() {
       //items = {};
 
   // Show `Home` link in nav
-  $('.back-to-home').show();
+  showNav();
   
   //if (Dg.path.indexOf('edit') > -1) {
   if (this.editable) {
@@ -525,7 +525,7 @@ Dg.setPage('events', function() {
       unpub_section;
 
   // Show `Home` link in nav
-  $('.back-to-home').show();
+  showNav();
   
   //if (Dg.path.indexOf('edit') > -1) {
   if (this.editable) {
@@ -632,7 +632,7 @@ Dg.setPage('item-single', function(params) {
       nodeCover = G.col('featurings').get('coverStory');
 
   // Show `Home` link in nav
-  $('.back-to-home').show();
+  showNav();
 
   if (this.editable) {
     editable = true;
@@ -993,7 +993,7 @@ Dg.setPage('event-single', function() {
       nodeEvt;
 
   // Show `Home` link in nav
-  $('.back-to-home').show();
+  showNav();
 
   //if (query.indexOf('edit') > -1) {
   if (this.editable) {
@@ -1266,7 +1266,7 @@ Dg.setPage('_event-single', function() {
       editable = false;
 
   // Show `Home` link in nav
-  $('.back-to-home').show();
+  showNav();
 
   if (query.indexOf('edit') > -1) {
     query = query.slice(query.indexOf('edit') + 4);
@@ -1521,7 +1521,7 @@ Dg.setPage('media.images', function() {
     .css('color', '#fff');
 
   // Show `Home` link in nav
-  $('.back-to-home').show();
+  showNav();
 
   fetchDS.load(function() {
     Editor.getImages().then(function(res) {
@@ -4305,6 +4305,10 @@ function setEditorMode() {
       console.error(err);
     }
   }
+};
+
+function showNav() {
+  $('.back-to-home').css("opacity", "1");
 };
 
 // Expose Dg
