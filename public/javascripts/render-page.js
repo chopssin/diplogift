@@ -254,6 +254,7 @@ Dg.setPage('home', function() {
       sample1 = 'https://firebasestorage.googleapis.com/v0/b/cope-326d5.appspot.com/o/user_apps%2Fdiplogifts-1%2Fimages%2Fevents%2F361-01.jpg?alt=media&token=648e83f2-f5f3-4b4f-adea-654015a4f658',
       sample2 = 'https://firebasestorage.googleapis.com/v0/b/cope-326d5.appspot.com/o/user_apps%2Fdiplogifts-1%2Fimages%2Fitems%2F409_02.jpg?alt=media&token=eb2d0418-8966-4c8b-b0af-eb752831d9f6',
       aboutText = "<h3>關於網站</h3><p>臺南市不斷與世界各地城市有著各式交流活動，同時也接收到來自各方祝福，收受了各種獨特的公務禮物，但這些禮物過去都只被保存在市府內未曾公開。每個禮物背後都是曾經聯繫的故事，為了讓這些故事更為人所知，讓記憶得以延續，因此誕生了這個網站。</p><p>本網站由<a href=\"http://web.tainan.gov.tw/sec/\">台南市政府秘書處</a>特別企劃。</p>";
+  aboutText = "<h3>關於網站</h3><p>臺南市不斷與世界各地城市有著各式交流活動，同時也接收到來自各方祝福，收受了各種獨特的公務禮物，但這些禮物過去都只被保存在市府內未曾公開。每個禮物背後都是曾經聯繫的故事，為了讓這些故事更為人所知，讓記憶得以延續，<a href=\"http://web.tainan.gov.tw/sec/\" target=\"_blank\">秘書處</a>特別建置了「台南市城市交流藝廊」，透過網路線上藝廊的方式來記錄這些禮物背後所蘊含致贈者的心意、文化交流成果及文化意涵，以期民眾及致贈者均能隨時隨地看見這些美麗又感動的時刻。</p>";
 
   //if (Dg.path.indexOf('edit') > -1) {
   if (this.editable) {
